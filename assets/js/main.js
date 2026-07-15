@@ -386,15 +386,15 @@
         tags: ["DSpace", "Open Access", "Preservation"],
       },
       {
-        group: "ai", art: "ai", draft: true,
-        title: { en: "CAT-AI Project", ar: "مشروع CAT-AI" },
-        meta: { en: "AI model · Libraries", ar: "نموذج ذكاء اصطناعي · المكتبات" },
-        role: { en: "Creator & developer", ar: "صاحب ومطوّر المشروع" },
+        group: "ai", art: "ai",
+        title: { en: "CAT-AI — AI-Powered Intelligent Cataloging System", ar: "مشروع CAT-AI — نظام الفهرسة الذكي المدعوم بالذكاء الاصطناعي" },
+        meta: { en: "42 Abu Dhabi, UAE · 2024–2025", ar: "42 أبوظبي، الإمارات · 2024–2025" },
+        role: { en: "Project Manager & General Supervisor", ar: "مدير المشروع والمشرف العام" },
         desc: {
-          en: "An AI model for intelligent, automated cataloguing — generating and enriching bibliographic metadata for library and archival materials.",
-          ar: "نموذج ذكاء اصطناعي للفهرسة الآلية الذكية — لتوليد وإثراء البيانات الببليوغرافية لمواد المكتبات والأرشيف."
+          en: "Managed the strategic planning and full delivery lifecycle of an AI-based intelligent cataloguing system — from design and modelling to testing. Supervised the 42 Abu Dhabi development team, coordinated between engineers and knowledge experts, and ensured full compliance with international cataloguing and classification standards.",
+          ar: "أدار التخطيط الاستراتيجي ودورة التطوير الكاملة لنظام فهرسة ذكي مبني على الذكاء الاصطناعي — من التصميم والنمذجة إلى الاختبار. أشرف على فريق التطوير في 42 أبوظبي، ونسّق بين المطوّرين وخبراء المعرفة، وضمن الالتزام الكامل بمعايير الفهرسة والتصنيف العالمية."
         },
-        tags: ["AI Model", "Cataloging", "Metadata"],
+        tags: ["AI-Powered", "Cataloging & Classification", "Project Management"],
       },
     ],
 
