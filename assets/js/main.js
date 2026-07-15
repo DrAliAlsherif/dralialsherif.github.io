@@ -395,6 +395,7 @@
           ar: "أدار التخطيط الاستراتيجي ودورة التطوير الكاملة لنظام فهرسة ذكي مبني على الذكاء الاصطناعي — من التصميم والنمذجة إلى الاختبار. أشرف على فريق التطوير في 42 أبوظبي، ونسّق بين المطوّرين وخبراء المعرفة، وضمن الالتزام الكامل بمعايير الفهرسة والتصنيف العالمية."
         },
         tags: ["AI-Powered", "Cataloging & Classification", "Project Management"],
+        video: { src: "assets/video/cat-ai-user-guide.mp4", poster: "assets/video/cat-ai-user-guide-poster.jpg" },
       },
 
       {
@@ -589,6 +590,7 @@
       "projects.sub": "Selected repository builds and AI model work in libraries and knowledge management.",
       "projects.repos": "Repositories projects", "projects.aimodels": "AI models",
       "projects.systems": "Library systems & builds", "projects.catalog": "Cataloging, systems & training",
+      "projects.watch": "Watch user guide",
       "speaking.kicker": "Stage", "speaking.title": "Conferences & speaking",
       "speaking.sub": "Keynotes, research presentations and award moments across the region's leading knowledge events.",
       "workshops.kicker": "Training", "workshops.title": "Workshops & training",
@@ -655,6 +657,7 @@
       "projects.sub": "مختارات من مشاريع بناء المستودعات الرقمية ونماذج الذكاء الاصطناعي في المكتبات وإدارة المعرفة.",
       "projects.repos": "مشاريع المستودعات الرقمية", "projects.aimodels": "نماذج الذكاء الاصطناعي",
       "projects.systems": "بناء وأنظمة المكتبات", "projects.catalog": "الفهرسة والنظم والتدريب",
+      "projects.watch": "مشاهدة دليل الاستخدام",
       "speaking.kicker": "المنصة", "speaking.title": "المؤتمرات والمحاضرات",
       "speaking.sub": "كلمات رئيسية وعروض بحثية ولحظات تكريم في أبرز فعاليات المعرفة بالمنطقة.",
       "workshops.kicker": "التدريب", "workshops.title": "ورش العمل والتدريب",
@@ -821,6 +824,10 @@
       if (!items.length) return "";
       const cards = items.map((p) => {
         const tags = p.tags.map((tg) => `<span>${tg}</span>`).join("");
+        const watch = p.video
+          ? `<button class="pcard-watch" data-video="${p.video.src}" data-poster="${p.video.poster || ""}">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>${t("projects.watch")}</button>`
+          : "";
         return `<article class="pcard reveal">
           <div class="pcard-media art-panel">${RART[p.art]()}</div>
           <div class="pcard-body">
@@ -828,12 +835,14 @@
             <h4>${p.title[lang]}</h4>
             <div class="pcard-meta">${p.meta[lang]}</div>
             <p>${p.desc[lang]}</p>
+            ${watch}
             <div class="pcard-tags">${tags}</div>
           </div></article>`;
       }).join("");
       return `<div class="pgroup reveal"><h3 class="pgroup-title">${g.label}</h3>
         <div class="pcards">${cards}</div></div>`;
     }).join("");
+    $$(".pcard-watch").forEach((b) => b.addEventListener("click", () => openVideo(b.dataset.video, b.dataset.poster)));
 
     // Volunteer
     $("#volunteerTimeline").innerHTML = DATA.volunteer.map((x) =>
@@ -1009,6 +1018,31 @@
     if (e.key === "ArrowRight") stepLb(lang === "ar" ? -1 : 1);
     if (e.key === "ArrowLeft") stepLb(lang === "ar" ? 1 : -1);
   });
+
+  /* ---------------- Video modal ---------------- */
+  function openVideo(src, poster) {
+    const vm = $("#videoModal"), vp = $("#videoPlayer");
+    if (!vm || !vp) return;
+    vp.src = src; if (poster) vp.poster = poster;
+    vm.classList.add("open"); vm.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+    vp.play().catch(() => {});
+  }
+  function closeVideo() {
+    const vm = $("#videoModal"), vp = $("#videoPlayer");
+    if (!vm || !vp) return;
+    vp.pause();
+    vm.classList.remove("open"); vm.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+    setTimeout(() => { vp.removeAttribute("src"); vp.load(); }, 200);
+  }
+  (function () {
+    const vm = $("#videoModal");
+    if (!vm) return;
+    $("#videoClose").onclick = closeVideo;
+    vm.addEventListener("click", (e) => { if (e.target === vm) closeVideo(); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && vm.classList.contains("open")) closeVideo(); });
+  })();
 
   /* ---------------- Search ---------------- */
   function buildSearchIndex() {
