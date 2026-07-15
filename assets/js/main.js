@@ -373,6 +373,31 @@
         ar: ["مؤتمر الشارقة الدولي للمكتبات", "مع قادة المكتبات", "الشارقة، الإمارات", "2025", "تواصل مع قادة المكتبات الإقليميين والدوليين."] },
     ],
 
+    projects: [
+      {
+        group: "repo", art: "repository",
+        title: { en: "Digital Repository for Jumeira University", ar: "المستودع الرقمي لجامعة جميرا" },
+        meta: { en: "DSpace · Dubai, UAE · 2020", ar: "DSpace · دبي، الإمارات · 2020" },
+        role: { en: "Planning & building — Lead", ar: "التخطيط والبناء — قائد المشروع" },
+        desc: {
+          en: "Led the planning and implementation of the university's digital repository infrastructure on DSpace, enabling long-term preservation and open access to academic and institutional content.",
+          ar: "قاد تخطيط وبناء البنية التحتية للمستودع الرقمي للجامعة على نظام DSpace، بما يتيح الحفظ طويل الأمد والوصول الحر للمحتوى الأكاديمي والمؤسسي."
+        },
+        tags: ["DSpace", "Open Access", "Preservation"],
+      },
+      {
+        group: "ai", art: "ai", draft: true,
+        title: { en: "CAT-AI Project", ar: "مشروع CAT-AI" },
+        meta: { en: "AI model · Libraries", ar: "نموذج ذكاء اصطناعي · المكتبات" },
+        role: { en: "Creator & developer", ar: "صاحب ومطوّر المشروع" },
+        desc: {
+          en: "An AI model for intelligent, automated cataloguing — generating and enriching bibliographic metadata for library and archival materials.",
+          ar: "نموذج ذكاء اصطناعي للفهرسة الآلية الذكية — لتوليد وإثراء البيانات الببليوغرافية لمواد المكتبات والأرشيف."
+        },
+        tags: ["AI Model", "Cataloging", "Metadata"],
+      },
+    ],
+
     workshops: [
       { en: "Smart Digital Transformation in Academic Event Management Using AI Tools", ar: "التحول الرقمي الذكي في إدارة الفعاليات الأكاديمية باستخدام أدوات الذكاء الاصطناعي", topic: "AI",
         descEn: "Using AI tools to plan, run and automate academic events end-to-end.", descAr: "توظيف أدوات الذكاء الاصطناعي لتخطيط وإدارة الفعاليات الأكاديمية وأتمتة مهامها." },
@@ -452,7 +477,7 @@
       "a11y.skip": "Skip to main content",
       "brand.name": "Dr. Ali Fathy Alsherif", "brand.role": "LIS · AI · Digital Repositories",
       "nav.about": "About", "nav.expertise": "Expertise", "nav.experience": "Experience",
-      "nav.books": "Books", "nav.research": "Research", "nav.speaking": "Speaking",
+      "nav.books": "Books", "nav.research": "Research", "nav.projects": "Projects", "nav.speaking": "Speaking",
       "nav.gallery": "Gallery", "nav.services": "Services", "nav.contact": "Contact", "nav.cv": "Download CV",
       "search.placeholder": "Search books, research, workshops…",
       "hero.eyebrow": "Dubai, United Arab Emirates · Golden Visa Holder",
@@ -481,6 +506,9 @@
       "books.sub": "Three scholarly volumes on digital repositories, heritage digitization and AI in libraries — published by Dar Al Nahda Al Ilmiya, Dubai.",
       "research.kicker": "Scholarship", "research.title": "Research & publications",
       "research.sub": "Peer-reviewed papers, conference research and articles on digital repositories, AI and Arabic heritage.",
+      "projects.kicker": "Portfolio", "projects.title": "Projects",
+      "projects.sub": "Selected repository builds and AI model work in libraries and knowledge management.",
+      "projects.repos": "Repositories projects", "projects.aimodels": "AI models",
       "speaking.kicker": "Stage", "speaking.title": "Conferences & speaking",
       "speaking.sub": "Keynotes, research presentations and award moments across the region's leading knowledge events.",
       "workshops.kicker": "Training", "workshops.title": "Workshops & training",
@@ -514,7 +542,7 @@
       "a11y.skip": "تخطَّ إلى المحتوى الرئيسي",
       "brand.name": "د. علي فتحي الشريف", "brand.role": "مكتبات · ذكاء اصطناعي · مستودعات رقمية",
       "nav.about": "نبذة", "nav.expertise": "الخبرات", "nav.experience": "المسيرة",
-      "nav.books": "الكتب", "nav.research": "الأبحاث", "nav.speaking": "المؤتمرات",
+      "nav.books": "الكتب", "nav.research": "الأبحاث", "nav.projects": "المشاريع", "nav.speaking": "المؤتمرات",
       "nav.gallery": "المعرض", "nav.services": "الخدمات", "nav.contact": "تواصل", "nav.cv": "تحميل السيرة",
       "search.placeholder": "ابحث في الكتب والأبحاث والورش…",
       "hero.eyebrow": "دبي، الإمارات العربية المتحدة · حاصل على الإقامة الذهبية",
@@ -543,6 +571,9 @@
       "books.sub": "ثلاثة مؤلفات علمية حول المستودعات الرقمية ورقمنة التراث والذكاء الاصطناعي في المكتبات — صادرة عن دار النهضة العلمية، دبي.",
       "research.kicker": "الإنتاج العلمي", "research.title": "الأبحاث والمنشورات",
       "research.sub": "أوراق محكّمة وأبحاث مؤتمرات ومقالات حول المستودعات الرقمية والذكاء الاصطناعي والتراث العربي.",
+      "projects.kicker": "أعمال", "projects.title": "المشاريع",
+      "projects.sub": "مختارات من مشاريع بناء المستودعات الرقمية ونماذج الذكاء الاصطناعي في المكتبات وإدارة المعرفة.",
+      "projects.repos": "مشاريع المستودعات الرقمية", "projects.aimodels": "نماذج الذكاء الاصطناعي",
       "speaking.kicker": "المنصة", "speaking.title": "المؤتمرات والمحاضرات",
       "speaking.sub": "كلمات رئيسية وعروض بحثية ولحظات تكريم في أبرز فعاليات المعرفة بالمنطقة.",
       "workshops.kicker": "التدريب", "workshops.title": "ورش العمل والتدريب",
@@ -695,6 +726,30 @@
           <div class="wcard-foot"><span>${x.topic}</span><span>${lang === "ar" ? "بالعربية" : "Arabic"}</span></div>
         </div>
       </article>`;
+    }).join("");
+
+    // Projects (grouped)
+    const pgroups = [
+      { key: "repo", label: t("projects.repos") },
+      { key: "ai", label: t("projects.aimodels") },
+    ];
+    $("#projectsGrid").innerHTML = pgroups.map((g) => {
+      const items = DATA.projects.filter((p) => p.group === g.key);
+      if (!items.length) return "";
+      const cards = items.map((p) => {
+        const tags = p.tags.map((tg) => `<span>${tg}</span>`).join("");
+        return `<article class="pcard reveal">
+          <div class="pcard-media art-panel">${RART[p.art]()}</div>
+          <div class="pcard-body">
+            <span class="pcard-role">${p.role[lang]}</span>
+            <h4>${p.title[lang]}</h4>
+            <div class="pcard-meta">${p.meta[lang]}</div>
+            <p>${p.desc[lang]}</p>
+            <div class="pcard-tags">${tags}</div>
+          </div></article>`;
+      }).join("");
+      return `<div class="pgroup reveal"><h3 class="pgroup-title">${g.label}</h3>
+        <div class="pcards">${cards}</div></div>`;
     }).join("");
 
     // Volunteer
@@ -877,6 +932,7 @@
     const idx = [];
     DATA.books.forEach((x) => idx.push({ cat: "Book", catAr: "كتاب", en: x.en[0], ar: x.ar[0], to: "#books" }));
     DATA.research.forEach((x) => idx.push({ cat: "Research", catAr: "بحث", en: x.en[0], ar: x.ar[0], to: "#research" }));
+    DATA.projects.forEach((x) => idx.push({ cat: "Project", catAr: "مشروع", en: x.title.en, ar: x.title.ar, to: "#projects" }));
     DATA.workshops.forEach((x) => idx.push({ cat: "Workshop", catAr: "ورشة", en: x.en, ar: x.ar, to: "#workshops" }));
     DATA.expertise.forEach((x) => idx.push({ cat: "Expertise", catAr: "خبرة", en: x.en[0], ar: x.ar[0], to: "#expertise" }));
     DATA.services.forEach((x) => idx.push({ cat: "Service", catAr: "خدمة", en: x.en[0], ar: x.ar[0], to: "#services" }));
