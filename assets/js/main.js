@@ -127,8 +127,75 @@
         `<path class="ra-edge" d="M112 44 L160 86 L208 44"/>`
       );
     },
+    strategy() {
+      const bars = [[64, 96], [98, 80], [132, 60], [166, 42]];
+      let b = "";
+      bars.forEach(([x, y]) => { b += `<rect class="ra-stroke ra-dim" x="${x}" y="${y}" width="22" height="${120 - y}" rx="2"/>`; });
+      return raWrap(
+        `<line class="ra-stroke" x1="56" y1="120" x2="252" y2="120"/>` + b +
+        `<polyline class="ra-signal" points="70,102 104,86 140,66 178,48"/>` +
+        `<circle class="ra-accent" cx="178" cy="48" r="4"/>` +
+        `<circle class="ra-stroke" cx="238" cy="70" r="22"/>` +
+        `<circle class="ra-stroke ra-dim" cx="238" cy="70" r="13"/>` +
+        `<circle class="ra-accent2" cx="238" cy="70" r="5"/>`
+      );
+    },
+    technical() {
+      const gear = (cx, cy, r) => {
+        let teeth = "";
+        for (let a = 0; a < 360; a += 45) {
+          const rad = a * Math.PI / 180, c = Math.cos(rad), s = Math.sin(rad);
+          teeth += `<line class="ra-stroke" x1="${(cx + c * r).toFixed(1)}" y1="${(cy + s * r).toFixed(1)}" x2="${(cx + c * (r + 7)).toFixed(1)}" y2="${(cy + s * (r + 7)).toFixed(1)}"/>`;
+        }
+        return `<circle class="ra-stroke" cx="${cx}" cy="${cy}" r="${r}"/><circle class="ra-stroke ra-dim" cx="${cx}" cy="${cy}" r="${(r * 0.42).toFixed(1)}"/>${teeth}`;
+      };
+      return raWrap(
+        gear(120, 74, 28) + gear(198, 104, 20) +
+        `<circle class="ra-node ra-node--a" cx="120" cy="74" r="5"/>` +
+        `<circle class="ra-node ra-node--b" cx="198" cy="104" r="4"/>`
+      );
+    },
+    metadata() {
+      let rows = "";
+      const ys = [56, 76, 96, 112], ws = [96, 120, 80, 108];
+      ys.forEach((y, i) => {
+        rows += `<rect class="${i % 2 ? "ra-accent2" : "ra-accent"}" x="92" y="${y}" width="10" height="10" rx="2"/>` +
+                `<line class="ra-dim2" x1="112" y1="${y + 5}" x2="${112 + ws[i]}" y2="${y + 5}"/>`;
+      });
+      return raWrap(
+        `<rect class="ra-stroke" x="78" y="40" width="164" height="88" rx="6"/>` +
+        `<line class="ra-stroke ra-dim" x1="78" y1="46" x2="242" y2="46"/>` + rows
+      );
+    },
+    security() {
+      return raWrap(
+        `<path class="ra-stroke" d="M160 40 l40 14 v26 c0 30 -22 44 -40 52 c-18 -8 -40 -22 -40 -52 v-26 z"/>` +
+        `<circle class="ra-accent" cx="160" cy="78" r="8"/>` +
+        `<path class="ra-check" style="stroke:var(--cyan-400)" d="M160 78 v18" fill="none"/>` +
+        `<circle class="ra-node ra-node--b" cx="96" cy="58" r="3.5"/>` +
+        `<circle class="ra-node ra-node--b" cx="224" cy="58" r="3.5"/>` +
+        `<circle class="ra-node ra-node--a" cx="104" cy="112" r="3.5"/>` +
+        `<circle class="ra-node ra-node--a" cx="216" cy="112" r="3.5"/>` +
+        `<path class="ra-edge" d="M96 58 H126 M224 58 H194 M104 112 H128 M216 112 H192"/>`
+      );
+    },
   };
   const researchArt = (title) => RART[researchTheme(title)]();
+
+  function workshopTheme(title) {
+    const s = (title || "").toLowerCase();
+    if (/prompt|generative/.test(s)) return "ai";
+    if (/security/.test(s)) return "security";
+    if (/marc|\brda\b|lcsh|catalog/.test(s)) return "metadata";
+    if (/manuscript|heritage/.test(s)) return "manuscript";
+    if (/\bils\b|integrated library|technical operation/.test(s)) return "technical";
+    if (/strateg|big.?data/.test(s)) return "strategy";
+    if (/repositor|collection/.test(s)) return "repository";
+    if (/\bai\b|machine learning|smart|innovation/.test(s)) return "ai";
+    if (/archiv|preservation/.test(s)) return "archive";
+    return "repository";
+  }
+  const workshopArt = (title) => RART[workshopTheme(title)]();
 
   /* ---------------- DATA (bilingual) ---------------- */
   const DATA = {
@@ -307,20 +374,34 @@
     ],
 
     workshops: [
-      { en: "Smart Digital Transformation in Academic Event Management Using AI Tools", ar: "التحول الرقمي الذكي في إدارة الفعاليات الأكاديمية باستخدام أدوات الذكاء الاصطناعي", topic: "AI" },
-      { en: "Institutional Innovation with AI in Information & Research Centers", ar: "الابتكار المؤسسي بالذكاء الاصطناعي في مراكز المعلومات والبحوث", topic: "AI" },
-      { en: "AI Prompt Engineering for Libraries: From Fundamentals to Practical Models", ar: "هندسة أوامر الذكاء الاصطناعي للمكتبات: من الأساسيات إلى النماذج العملية", topic: "AI" },
-      { en: "Planning & Building Digital Repositories Based on Global Standards", ar: "تخطيط وبناء المستودعات الرقمية وفق المعايير العالمية", topic: "Repositories" },
-      { en: "Developing Library Services Using AI & Machine Learning Tools", ar: "تطوير خدمات المكتبات باستخدام أدوات الذكاء الاصطناعي والتعلم الآلي", topic: "AI" },
-      { en: "Strategic Planning for Information Institutions in the Big-Data Era", ar: "التخطيط الاستراتيجي لمؤسسات المعلومات في عصر البيانات الضخمة", topic: "Strategy" },
-      { en: "Managing Technical Operations in the Modern Digital Library", ar: "إدارة العمليات الفنية في بيئة المكتبة الرقمية الحديثة", topic: "Technical" },
-      { en: "Automated Cataloging Using MARC 21: Advanced Applications", ar: "الفهرسة الآلية باستخدام مارك 21: تطبيقات متقدمة", topic: "Metadata" },
-      { en: "Descriptive & Subject Cataloging According to RDA & LCSH", ar: "الفهرسة الوصفية والموضوعية وفق معياري RDA وLCSH", topic: "Metadata" },
-      { en: "Using & Managing Integrated Library Systems (ILS)", ar: "استخدام وإدارة نظم المكتبات المتكاملة", topic: "Technical" },
-      { en: "Building & Developing Digital Collections in Libraries", ar: "بناء وتطوير المجموعات الرقمية في المكتبات", topic: "Repositories" },
-      { en: "Information & Document Security in Digital Environments", ar: "أمن المعلومات والوثائق في البيئات الرقمية", topic: "Archives" },
-      { en: "Digital Preservation & Digitization of Manuscripts & Heritage", ar: "الحفظ الرقمي ورقمنة المخطوطات والتراث", topic: "Archives" },
-      { en: "Digital Repositories, Archiving & Preservation in the Age of AI & Open Access", ar: "المستودعات الرقمية والأرشفة والحفظ في عصر الذكاء الاصطناعي والوصول الحر", topic: "Repositories" },
+      { en: "Smart Digital Transformation in Academic Event Management Using AI Tools", ar: "التحول الرقمي الذكي في إدارة الفعاليات الأكاديمية باستخدام أدوات الذكاء الاصطناعي", topic: "AI",
+        descEn: "Using AI tools to plan, run and automate academic events end-to-end.", descAr: "توظيف أدوات الذكاء الاصطناعي لتخطيط وإدارة الفعاليات الأكاديمية وأتمتة مهامها." },
+      { en: "Institutional Innovation with AI in Information & Research Centers", ar: "الابتكار المؤسسي بالذكاء الاصطناعي في مراكز المعلومات والبحوث", topic: "AI",
+        descEn: "Driving institutional innovation through AI applications in information and research centers.", descAr: "بناء ثقافة ابتكار مؤسسي عبر تطبيقات الذكاء الاصطناعي في مراكز المعلومات والبحوث." },
+      { en: "AI Prompt Engineering for Libraries: From Fundamentals to Practical Models", ar: "هندسة أوامر الذكاء الاصطناعي للمكتبات: من الأساسيات إلى النماذج العملية", topic: "AI",
+        descEn: "Crafting effective prompts for generative models — from fundamentals to practical library use cases.", descAr: "صياغة أوامر فعّالة للنماذج التوليدية، من الأساسيات إلى نماذج عملية للمكتبات." },
+      { en: "Planning & Building Digital Repositories Based on Global Standards", ar: "تخطيط وبناء المستودعات الرقمية وفق المعايير العالمية", topic: "Repositories",
+        descEn: "Planning and building institutional digital repositories aligned with global standards.", descAr: "تخطيط وبناء المستودعات الرقمية المؤسسية وفق أحدث المعايير العالمية." },
+      { en: "Developing Library Services Using AI & Machine Learning Tools", ar: "تطوير خدمات المكتبات باستخدام أدوات الذكاء الاصطناعي والتعلم الآلي", topic: "AI",
+        descEn: "Enhancing and personalizing library services with AI and machine-learning tools.", descAr: "تطوير خدمات المكتبات وتخصيصها باستخدام الذكاء الاصطناعي والتعلم الآلي." },
+      { en: "Strategic Planning for Information Institutions in the Big-Data Era", ar: "التخطيط الاستراتيجي لمؤسسات المعلومات في عصر البيانات الضخمة", topic: "Strategy",
+        descEn: "Building strategic plans for information institutions in the age of big data.", descAr: "وضع خطط استراتيجية لمؤسسات المعلومات في ظل تحديات البيانات الضخمة." },
+      { en: "Managing Technical Operations in the Modern Digital Library", ar: "إدارة العمليات الفنية في بيئة المكتبة الرقمية الحديثة", topic: "Technical",
+        descEn: "Managing technical operations and workflows in the modern digital library.", descAr: "إدارة العمليات الفنية وسير العمل في بيئة المكتبة الرقمية الحديثة." },
+      { en: "Automated Cataloging Using MARC 21: Advanced Applications", ar: "الفهرسة الآلية باستخدام مارك 21: تطبيقات متقدمة", topic: "Metadata",
+        descEn: "Advanced automated cataloguing and record building with the MARC 21 format.", descAr: "تطبيقات متقدمة للفهرسة الآلية وبناء التسجيلات وفق تدوينة مارك 21." },
+      { en: "Descriptive & Subject Cataloging According to RDA & LCSH", ar: "الفهرسة الوصفية والموضوعية وفق معياري RDA وLCSH", topic: "Metadata",
+        descEn: "Descriptive and subject cataloguing and authority control using RDA and LCSH.", descAr: "الفهرسة الوصفية والموضوعية وضبط رؤوس الموضوعات وفق RDA وLCSH." },
+      { en: "Using & Managing Integrated Library Systems (ILS)", ar: "استخدام وإدارة نظم المكتبات المتكاملة", topic: "Technical",
+        descEn: "Operating and administering integrated library systems across their core modules.", descAr: "تشغيل وإدارة نظم المكتبات المتكاملة عبر وحداتها ودورات العمل فيها." },
+      { en: "Building & Developing Digital Collections in Libraries", ar: "بناء وتطوير المجموعات الرقمية في المكتبات", topic: "Repositories",
+        descEn: "Building, growing and organizing digital collections to enrich library content.", descAr: "بناء المجموعات الرقمية وتنميتها وتنظيمها لإثراء المحتوى داخل المكتبات." },
+      { en: "Information & Document Security in Digital Environments", ar: "أمن المعلومات والوثائق في البيئات الرقمية", topic: "Archives",
+        descEn: "Protecting information and documents and ensuring integrity and privacy in digital environments.", descAr: "حماية المعلومات والوثائق وضمان سلامتها وخصوصيتها في البيئات الرقمية." },
+      { en: "Digital Preservation & Digitization of Manuscripts & Heritage", ar: "الحفظ الرقمي ورقمنة المخطوطات والتراث", topic: "Archives",
+        descEn: "Digitizing manuscripts and heritage and applying long-term digital preservation policies.", descAr: "رقمنة المخطوطات والتراث وتطبيق سياسات الحفظ الرقمي طويل الأمد." },
+      { en: "Digital Repositories, Archiving & Preservation in the Age of AI & Open Access", ar: "المستودعات الرقمية والأرشفة والحفظ في عصر الذكاء الاصطناعي والوصول الحر", topic: "Repositories",
+        descEn: "Repositories, archiving and digital preservation in the era of AI and open access.", descAr: "المستودعات والأرشفة والحفظ الرقمي في عصر الذكاء الاصطناعي والوصول الحر." },
     ],
 
     volunteer: [
@@ -603,12 +684,18 @@
     }).join("");
 
     // Workshops
-    $("#workshopsGrid").innerHTML = DATA.workshops.map((x, i) =>
-      `<article class="wcard reveal" style="transition-delay:${(i % 4) * 40}ms">
-        <div class="wcard-num">${String(i + 1).padStart(2, "0")}</div>
-        <h3>${lang === "ar" ? x.ar : x.en}</h3>
-        <div class="wcard-foot"><span>${x.topic}</span><span>${lang === "ar" ? "بالعربية" : "Arabic"}</span></div>
-      </article>`).join("");
+    $("#workshopsGrid").innerHTML = DATA.workshops.map((x, i) => {
+      const title = lang === "ar" ? x.ar : x.en;
+      const desc = lang === "ar" ? x.descAr : x.descEn;
+      return `<article class="wcard reveal" style="transition-delay:${(i % 4) * 40}ms">
+        <div class="wcard-media art-panel">${workshopArt(x.en)}<span class="wcard-num">${String(i + 1).padStart(2, "0")}</span></div>
+        <div class="wcard-body">
+          <h3>${title}</h3>
+          ${desc ? `<p class="wcard-desc">${desc}</p>` : ""}
+          <div class="wcard-foot"><span>${x.topic}</span><span>${lang === "ar" ? "بالعربية" : "Arabic"}</span></div>
+        </div>
+      </article>`;
+    }).join("");
 
     // Volunteer
     $("#volunteerTimeline").innerHTML = DATA.volunteer.map((x) =>
@@ -659,7 +746,7 @@
       const c = pick(x);
       const show = filter === "all" || x.type === filter;
       return `<article class="rcard${show ? "" : " hide"} reveal" data-type="${x.type}" style="transition-delay:${(i % 3) * 40}ms">
-        <div class="rcard-media">${researchArt(x.en[0])}</div>
+        <div class="rcard-media art-panel">${researchArt(x.en[0])}</div>
         <div class="rcard-body">
           <span class="rtype">${RTYPE[lang][x.type] || x.type}</span>
           <h3>${c[0]}</h3>
