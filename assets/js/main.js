@@ -396,6 +396,85 @@
         },
         tags: ["AI-Powered", "Cataloging & Classification", "Project Management"],
       },
+
+      {
+        group: "systems", art: "metadata",
+        title: { en: "Penal & Correctional Institution Library", ar: "مكتبة المؤسسة العقابية والإصلاحية" },
+        meta: { en: "Koha ILS · Ras Al Khaimah · Nov 2024 – Feb 2025", ar: "كوها · رأس الخيمة · نوفمبر 2024 – فبراير 2025" },
+        role: { en: "Build lead & trainer", ar: "قائد البناء والتدريب" },
+        desc: {
+          en: "Built the library database and metadata on the Koha ILS for the Sheikh Saud Educational Foundation — delivering user services, reports, policy development and staff training.",
+          ar: "بناء قاعدة بيانات المكتبة وبياناتها الوصفية على نظام كوها المتكامل لمؤسسة الشيخ سعود التعليمية — مع خدمات المستفيدين والتقارير وتطوير السياسات وتدريب الطاقم."
+        },
+        tags: ["Koha ILS", "Metadata", "Training"],
+      },
+      {
+        group: "systems", art: "technical",
+        title: { en: "Mawahib Library — Government Empowerment Dept.", ar: "مكتبة مواهب — دائرة تمكين الحكومة" },
+        meta: { en: "Koha ILS · Abu Dhabi · Jan – May 2023", ar: "كوها · أبوظبي · يناير – مايو 2023" },
+        role: { en: "Build lead & trainer", ar: "قائد البناء والتدريب" },
+        desc: {
+          en: "Built the library database and implemented a circulation and collection-management system on the Koha ILS — with user services, reports, policy development and staff training.",
+          ar: "بناء قاعدة بيانات المكتبة وتنفيذ نظام للإعارة وإدارة المجموعات على نظام كوها — مع خدمات المستفيدين والتقارير وتطوير السياسات وتدريب الطاقم."
+        },
+        tags: ["Koha ILS", "Circulation", "Collection Management"],
+      },
+      {
+        group: "systems", art: "security",
+        title: { en: "Library — Hamad Bin Mohammed Center for Heritage Revival", ar: "مكتبة مركز حمد بن محمد لإحياء التراث" },
+        meta: { en: "Symphony ILS · Dubai · 2018 – 2021", ar: "سيمفوني · دبي · 2018 – 2021" },
+        role: { en: "Supervisor", ar: "مشرف" },
+        desc: {
+          en: "Supervised the build of the library database on the Symphony ILS and implemented a security-tagging system to protect the heritage collection.",
+          ar: "الإشراف على بناء قاعدة بيانات المكتبة على نظام سيمفوني المتكامل، وتنفيذ نظام وسم أمني لحماية مجموعة التراث."
+        },
+        tags: ["Symphony ILS", "Security Tagging", "Heritage"],
+      },
+
+      {
+        group: "catalog", art: "technical",
+        title: { en: "Ministry of Culture & Knowledge Development", ar: "وزارة الثقافة وتنمية المعرفة" },
+        meta: { en: "Library automation · UAE · all branches", ar: "أتمتة المكتبات · الإمارات · جميع الفروع" },
+        role: { en: "Team lead — technical processing", ar: "قائد فريق — المعالجة الفنية" },
+        desc: {
+          en: "Led library automation and development across all ministry branches — supervising a team for the technical processing (cataloguing and classification) of books, e-books, references and audiovisual materials.",
+          ar: "قيادة أتمتة وتطوير المكتبات في جميع فروع الوزارة — والإشراف على فريق للمعالجة الفنية (الفهرسة والتصنيف) للكتب والكتب الإلكترونية والمراجع والمواد السمعبصرية."
+        },
+        tags: ["Automation", "Cataloging", "Team Lead"],
+      },
+      {
+        group: "catalog", art: "metadata",
+        title: { en: "National Library, UAE", ar: "المكتبة الوطنية، الإمارات" },
+        meta: { en: "Horizon LMS · Abu Dhabi", ar: "هورايزن · أبوظبي" },
+        role: { en: "Cataloger & operations monitor", ar: "مفهرس ومراقب العمليات" },
+        desc: {
+          en: "Catalogued materials on the Horizon library management system and monitored the project's cataloguing operations, reporting to the head office.",
+          ar: "الفهرسة على نظام هورايزن لإدارة المكتبات، ومتابعة عمليات الفهرسة في المشروع ورفع التقارير للإدارة."
+        },
+        tags: ["Horizon LMS", "Cataloging", "Quality"],
+      },
+      {
+        group: "catalog", art: "library",
+        title: { en: "Tabah Foundation Library", ar: "مكتبة مؤسسة طابة" },
+        meta: { en: "Library launch · Abu Dhabi · 2013", ar: "تأسيس مكتبة · أبوظبي · 2013" },
+        role: { en: "Launch & training lead", ar: "قائد التأسيس والتدريب" },
+        desc: {
+          en: "Launched the library from scratch — training the team on the library system, developing the collection, and planning the library's services and forms.",
+          ar: "تأسيس المكتبة من الصفر — تدريب الفريق على نظام المكتبة، وتنمية المجموعة، وتخطيط خدمات المكتبة ونماذجها."
+        },
+        tags: ["Library Launch", "Training", "Services"],
+      },
+      {
+        group: "catalog", art: "library",
+        title: { en: "RTA Library", ar: "مكتبة هيئة الطرق والمواصلات" },
+        meta: { en: "LC Classification · Dubai · 2011 – 2012", ar: "تصنيف الكونغرس · دبي · 2011 – 2012" },
+        role: { en: "Library operations & cataloging", ar: "عمليات المكتبة والفهرسة" },
+        desc: {
+          en: "Managed and monitored all library operations, services and reports, applying the Library of Congress Classification scheme and copy cataloguing.",
+          ar: "إدارة ومتابعة جميع عمليات المكتبة وخدماتها وتقاريرها، مع تطبيق تصنيف مكتبة الكونغرس والفهرسة المنقولة."
+        },
+        tags: ["LC Classification", "Copy Cataloging", "Operations"],
+      },
     ],
 
     workshops: [
@@ -509,6 +588,7 @@
       "projects.kicker": "Portfolio", "projects.title": "Projects",
       "projects.sub": "Selected repository builds and AI model work in libraries and knowledge management.",
       "projects.repos": "Repositories projects", "projects.aimodels": "AI models",
+      "projects.systems": "Library systems & builds", "projects.catalog": "Cataloging, systems & training",
       "speaking.kicker": "Stage", "speaking.title": "Conferences & speaking",
       "speaking.sub": "Keynotes, research presentations and award moments across the region's leading knowledge events.",
       "workshops.kicker": "Training", "workshops.title": "Workshops & training",
@@ -574,6 +654,7 @@
       "projects.kicker": "أعمال", "projects.title": "المشاريع",
       "projects.sub": "مختارات من مشاريع بناء المستودعات الرقمية ونماذج الذكاء الاصطناعي في المكتبات وإدارة المعرفة.",
       "projects.repos": "مشاريع المستودعات الرقمية", "projects.aimodels": "نماذج الذكاء الاصطناعي",
+      "projects.systems": "بناء وأنظمة المكتبات", "projects.catalog": "الفهرسة والنظم والتدريب",
       "speaking.kicker": "المنصة", "speaking.title": "المؤتمرات والمحاضرات",
       "speaking.sub": "كلمات رئيسية وعروض بحثية ولحظات تكريم في أبرز فعاليات المعرفة بالمنطقة.",
       "workshops.kicker": "التدريب", "workshops.title": "ورش العمل والتدريب",
@@ -732,6 +813,8 @@
     const pgroups = [
       { key: "repo", label: t("projects.repos") },
       { key: "ai", label: t("projects.aimodels") },
+      { key: "systems", label: t("projects.systems") },
+      { key: "catalog", label: t("projects.catalog") },
     ];
     $("#projectsGrid").innerHTML = pgroups.map((g) => {
       const items = DATA.projects.filter((p) => p.group === g.key);
