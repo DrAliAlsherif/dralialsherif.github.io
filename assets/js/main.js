@@ -541,14 +541,55 @@
       { icon: "transform", en: ["Digital Transformation", "Strategy and roadmaps to modernise information environments."], ar: ["التحول الرقمي", "الاستراتيجيات وخرائط الطريق لتحديث بيئات المعلومات."] },
     ],
 
-    gallery: (function () {
-      const arr = [];
-      for (let i = 1; i <= 39; i++) {
-        const n = String(i).padStart(2, "0");
-        arr.push({ img: `assets/img/gallery/gallery-${n}.jpg` });
-      }
-      return arr;
-    })(),
+    gallery: [
+      // Conferences
+      { img: "assets/img/gallery/ala-sharjah-1.jpg", cat: "conf", en: "ALA Conference — Sharjah", ar: "مؤتمر جمعية المكتبات الأمريكية — الشارقة" },
+      { img: "assets/img/gallery/ala-sharjah-2.jpg", cat: "conf", en: "ALA Conference — Sharjah", ar: "مؤتمر جمعية المكتبات الأمريكية — الشارقة" },
+      { img: "assets/img/gallery/ala-sharjah-3.jpg", cat: "conf", en: "ALA Conference — Sharjah", ar: "مؤتمر جمعية المكتبات الأمريكية — الشارقة" },
+      { img: "assets/img/gallery/afli-conf-2022.jpg", cat: "conf", en: "Arab Federation for Libraries & Information Conference 2022", ar: "مؤتمر الاتحاد العربي للمكتبات والمعلومات 2022" },
+      { img: "assets/img/gallery/dubai-intl-library-conf.jpg", cat: "conf", en: "Dubai International Library Conference", ar: "مؤتمر دبي الدولي للمكتبات" },
+      { img: "assets/img/gallery/knowledge-summit-dubai-1.jpg", cat: "conf", en: "Knowledge Summit — Dubai", ar: "قمة المعرفة — دبي" },
+      { img: "assets/img/gallery/knowledge-summit-dubai-2.jpg", cat: "conf", en: "Knowledge Summit — Dubai", ar: "قمة المعرفة — دبي" },
+      { img: "assets/img/gallery/afli-organizing-1.jpg", cat: "conf", en: "Organizing the AFLI Conference", ar: "تنظيم مؤتمر الاتحاد العربي للمكتبات" },
+      { img: "assets/img/gallery/afli-organizing-2.jpg", cat: "conf", en: "Organizing the AFLI Conference", ar: "تنظيم مؤتمر الاتحاد العربي للمكتبات" },
+      { img: "assets/img/gallery/afli-organizing-luxor-2017.jpg", cat: "conf", en: "Organizing the AFLI Conference — Luxor, Egypt 2017", ar: "تنظيم مؤتمر أفلي — الأقصر، مصر 2017" },
+      { img: "assets/img/gallery/sla-abu-dhabi-organizing.jpg", cat: "conf", en: "Organizing the SLA Abu Dhabi Conference", ar: "تنظيم مؤتمر جمعية المكتبات المتخصصة — أبوظبي" },
+      { img: "assets/img/gallery/alexandria-library-conf.jpg", cat: "conf", en: "Speaker at the Library of Alexandria Conference", ar: "متحدث في مؤتمر مكتبة الإسكندرية" },
+      { img: "assets/img/gallery/ica-archives-ad-2023-1.jpg", cat: "conf", en: "International Congress on Archives — Abu Dhabi 2023", ar: "المؤتمر الدولي للأرشيف — أبوظبي 2023" },
+      { img: "assets/img/gallery/ica-archives-ad-2023-2.jpg", cat: "conf", en: "International Congress on Archives — Abu Dhabi 2023", ar: "المؤتمر الدولي للأرشيف — أبوظبي 2023" },
+      { img: "assets/img/gallery/arab-league-conf-1.jpg", cat: "conf", en: "The League of Arab States Conference", ar: "مؤتمر جامعة الدول العربية" },
+      { img: "assets/img/gallery/arab-league-conf-2.jpg", cat: "conf", en: "The League of Arab States Conference", ar: "مؤتمر جامعة الدول العربية" },
+      { img: "assets/img/gallery/arab-league-conf-3.jpg", cat: "conf", en: "The League of Arab States Conference", ar: "مؤتمر جامعة الدول العربية" },
+      // Symposiums & forums
+      { img: "assets/img/gallery/ad-gov-libraries-1.jpg", cat: "symposium", en: "Abu Dhabi Government Libraries Symposium", ar: "ملتقى مكتبات حكومة أبوظبي" },
+      { img: "assets/img/gallery/ad-gov-libraries-2.jpg", cat: "symposium", en: "Abu Dhabi Government Libraries Symposium", ar: "ملتقى مكتبات حكومة أبوظبي" },
+      { img: "assets/img/gallery/ad-gov-libraries-3.jpg", cat: "symposium", en: "Abu Dhabi Government Libraries Symposium", ar: "ملتقى مكتبات حكومة أبوظبي" },
+      { img: "assets/img/gallery/ad-gov-libraries-4.jpg", cat: "symposium", en: "Abu Dhabi Government Libraries Symposium", ar: "ملتقى مكتبات حكومة أبوظبي" },
+      { img: "assets/img/gallery/culture-science-symposium.jpg", cat: "symposium", en: "Culture and Science Symposium", ar: "ندوة الثقافة والعلوم" },
+      { img: "assets/img/gallery/dubai-culture-science-1.jpg", cat: "symposium", en: "Dubai Culture and Science Symposium", ar: "ندوة دبي للثقافة والعلوم" },
+      { img: "assets/img/gallery/dubai-culture-science-2.jpg", cat: "symposium", en: "Dubai Culture and Science Symposium", ar: "ندوة دبي للثقافة والعلوم" },
+      { img: "assets/img/gallery/univ-sharjah-library-symposium.jpg", cat: "symposium", en: "University of Sharjah Library Symposium", ar: "ندوة مكتبة جامعة الشارقة" },
+      // Workshops
+      { img: "assets/img/gallery/ws-heritage-digitization.jpg", cat: "workshop", en: "Arab Heritage Digitization Workshop", ar: "ورشة رقمنة التراث العربي" },
+      { img: "assets/img/gallery/ws-digital-transformation-1.jpg", cat: "workshop", en: "Digital Transformation Workshop", ar: "ورشة التحول الرقمي" },
+      { img: "assets/img/gallery/ws-digital-transformation-2.jpg", cat: "workshop", en: "Digital Transformation Workshop", ar: "ورشة التحول الرقمي" },
+      { img: "assets/img/gallery/ws-smart-cataloging.jpg", cat: "workshop", en: "Smart Cataloging Workshop in Libraries", ar: "ورشة الفهرسة الذكية في المكتبات" },
+      // Book signings
+      { img: "assets/img/gallery/signing-ai-prompt-book.jpg", cat: "signing", en: "Signing “AI Prompt Engineering in Libraries”", ar: "توقيع كتاب هندسة أوامر الذكاء الاصطناعي في المكتبات" },
+      { img: "assets/img/gallery/signing-digital-repositories.jpg", cat: "signing", en: "Signing “Digital Repositories”", ar: "توقيع كتاب المستودعات الرقمية" },
+      // Teaching & academia
+      { img: "assets/img/gallery/students-jumeira-1.jpg", cat: "teaching", en: "With my students at Jumeira University, Dubai", ar: "مع طلابي في جامعة جميرا، دبي" },
+      { img: "assets/img/gallery/students-jumeira-2.jpg", cat: "teaching", en: "With my students at Jumeira University, Dubai", ar: "مع طلابي في جامعة جميرا، دبي" },
+      { img: "assets/img/gallery/42-abu-dhabi.jpg", cat: "teaching", en: "42 Abu Dhabi — Software Development", ar: "42 أبوظبي — تطوير البرمجيات" },
+      { img: "assets/img/gallery/cairo-university-1.jpg", cat: "teaching", en: "Cairo University", ar: "جامعة القاهرة" },
+      { img: "assets/img/gallery/cairo-university-2.jpg", cat: "teaching", en: "Cairo University", ar: "جامعة القاهرة" },
+      { img: "assets/img/gallery/sharjah-university.jpg", cat: "teaching", en: "University of Sharjah", ar: "جامعة الشارقة" },
+      // Recognition & institutions
+      { img: "assets/img/gallery/sharjah-prize-library-lit.jpg", cat: "honor", en: "Sharjah Prize for Library Literature", ar: "جائزة الشارقة لأدب المكتبات" },
+      { img: "assets/img/gallery/mbr-knowledge-foundation.jpg", cat: "honor", en: "Mohammed bin Rashid Knowledge Foundation", ar: "مؤسسة محمد بن راشد للمعرفة" },
+      { img: "assets/img/gallery/emirates-heritage-club-1.jpg", cat: "honor", en: "Emirates Heritage Club", ar: "نادي تراث الإمارات" },
+      { img: "assets/img/gallery/emirates-heritage-club-2.jpg", cat: "honor", en: "Emirates Heritage Club", ar: "نادي تراث الإمارات" },
+    ],
   };
 
   /* ---------------- i18n dictionary ---------------- */
@@ -599,6 +640,9 @@
       "volunteer.sub": "Giving back to the profession and the community across the UAE and Egypt.",
       "gallery.kicker": "Moments", "gallery.title": "Professional gallery",
       "gallery.sub": "Conferences, awards, training and networking across the region.",
+      "gallery.cat.all": "All", "gallery.cat.conf": "Conferences", "gallery.cat.symposium": "Symposiums & forums",
+      "gallery.cat.workshop": "Workshops", "gallery.cat.signing": "Book signings",
+      "gallery.cat.teaching": "Teaching & academia", "gallery.cat.honor": "Recognition & institutions",
       "services.kicker": "Work with me", "services.title": "Consulting services",
       "services.sub": "Advisory, implementation and capacity-building for institutions modernising their knowledge infrastructure.",
       "testi.kicker": "Recognition", "testi.title": "What partners say",
@@ -666,6 +710,9 @@
       "volunteer.sub": "العطاء لخدمة المهنة والمجتمع في الإمارات ومصر.",
       "gallery.kicker": "لحظات", "gallery.title": "المعرض المهني",
       "gallery.sub": "مؤتمرات وجوائز وتدريب وتواصل مهني عبر المنطقة.",
+      "gallery.cat.all": "الكل", "gallery.cat.conf": "المؤتمرات", "gallery.cat.symposium": "الندوات والملتقيات",
+      "gallery.cat.workshop": "ورش العمل", "gallery.cat.signing": "توقيع الكتب",
+      "gallery.cat.teaching": "التدريس والأكاديمية", "gallery.cat.honor": "التكريم والمؤسسات",
       "services.kicker": "اعمل معي", "services.title": "الخدمات الاستشارية",
       "services.sub": "الاستشارات والتنفيذ وبناء القدرات للمؤسسات التي تحدّث بنيتها المعرفية.",
       "testi.kicker": "تقدير", "testi.title": "آراء الشركاء",
@@ -864,12 +911,29 @@
       </div>`;
     }).join("");
 
-    // Gallery
-    $("#galleryGrid").innerHTML = DATA.gallery.map((x, i) =>
-      `<div class="gitem" data-lb="${x.img}" data-cap="">
-        <img src="${x.img}" alt="Professional event photo ${i + 1}" loading="lazy" />
-        <span class="gicon">${ICONS.zoom}</span>
-      </div>`).join("");
+    // Gallery + category filters
+    const gcats = ["all", "conf", "symposium", "workshop", "signing", "teaching", "honor"];
+    $("#galleryFilters").innerHTML = gcats.map((c, i) =>
+      `<button class="filter-chip${i === 0 ? " active" : ""}" data-filter="${c}">${t("gallery.cat." + c)}</button>`).join("");
+    const renderGallery = (filter) => {
+      const items = DATA.gallery.filter((x) => filter === "all" || x.cat === filter);
+      $("#galleryGrid").innerHTML = items.map((x) => {
+        const cap = lang === "ar" ? x.ar : x.en;
+        return `<figure class="gitem" data-cat="${x.cat}" data-lb="${x.img}" data-cap="${cap}">
+          <img src="${x.img}" alt="${cap}" loading="lazy" />
+          <figcaption class="gcap">${cap}</figcaption>
+          <span class="gicon">${ICONS.zoom}</span>
+        </figure>`;
+      }).join("");
+      bindLightboxTargets();
+    };
+    renderGallery("all");
+    $$("#galleryFilters .filter-chip").forEach((c) =>
+      c.addEventListener("click", () => {
+        $$("#galleryFilters .filter-chip").forEach((x) => x.classList.remove("active"));
+        c.classList.add("active");
+        renderGallery(c.dataset.filter);
+      }));
 
     // Services
     $("#servicesGrid").innerHTML = DATA.services.map((x, i) => {
