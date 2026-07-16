@@ -380,7 +380,7 @@
       { img: "assets/img/events/culture-science-symposium.jpg", tag: "Symposium", tagAr: "ندوة",
         en: ["Culture & Science Symposium", "Cultural & Scientific Association", "Dubai, UAE", "2019", "International gathering of library and information professionals."],
         ar: ["ندوة الثقافة والعلوم", "ندوة الثقافة والعلوم", "دبي، الإمارات", "2019", "ملتقى دولي لمهنيي المكتبات والمعلومات."] },
-      { img: "assets/img/gallery/gallery-03.jpg", tag: "Conference", tagAr: "مؤتمر",
+      { img: "assets/img/gallery/ala-sharjah-2.jpg", tag: "Conference", tagAr: "مؤتمر",
         en: ["Sharjah International Library Conference", "SILC — with library leaders", "Sharjah, UAE", "2025", "Networking with regional and international library leaders."],
         ar: ["مؤتمر الشارقة الدولي للمكتبات", "مع قادة المكتبات", "الشارقة، الإمارات", "2025", "تواصل مع قادة المكتبات الإقليميين والدوليين."] },
     ],
