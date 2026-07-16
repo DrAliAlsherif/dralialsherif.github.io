@@ -590,6 +590,49 @@
       { img: "assets/img/gallery/emirates-heritage-club-1.jpg", cat: "honor", en: "Emirates Heritage Club", ar: "نادي تراث الإمارات" },
       { img: "assets/img/gallery/emirates-heritage-club-2.jpg", cat: "honor", en: "Emirates Heritage Club", ar: "نادي تراث الإمارات" },
     ],
+
+    testimonials: [
+      {
+        initials: "ES", name: { en: "Eslam Saad Elkourany", ar: "إسلام سعد الكوراني" },
+        role: { en: "e-Learning Resources Specialist · Higher Colleges of Technology", ar: "أخصائي مصادر التعلّم الإلكتروني · كليات التقنية العليا" },
+        text: { en: "Dr. Ali is a distinguished librarian in his work. I have worked with him for many years, and he has the experience that qualifies him for a leadership position in libraries and learning resources. He will be a great gain for any entity he works with.", ar: "الدكتور علي أخصائي مكتبات متميّز في عمله. عملت معه سنوات طويلة، ولديه من الخبرة ما يؤهّله لتولّي مناصب قيادية في مجال المكتبات ومصادر التعلّم. سيكون إضافة كبيرة لأي جهة يعمل بها." },
+      },
+      {
+        initials: "SS", name: { en: "Prof. Sherif Shaheen", ar: "أ.د. شريف شاهين" },
+        role: { en: "Professor of Library & Information Management · Cairo University", ar: "أستاذ إدارة المكتبات والمعلومات · جامعة القاهرة" },
+        text: { en: "A respected, dedicated and professional person — recommended for any responsibility in libraries and information centers worldwide. I wish him all the best in his career.", ar: "شخص محترم ومتفانٍ ومحترف — أرشّحه لأي مسؤولية في المكتبات ومراكز المعلومات حول العالم. أتمنى له كل التوفيق في مسيرته." },
+      },
+      {
+        initials: "AA", name: { en: "Dr. Ali Abbas", ar: "د. علي عباس" },
+        role: { en: "Library Manager · Umm Al Quwain University", ar: "مدير المكتبة · جامعة أم القيوين" },
+        text: { en: "Ali Fathy is a hardworking, serious professional with great practical experience in libraries. He is qualified for all types of libraries and has a real passion for continuously developing himself and learning everything new in the field.", ar: "علي فتحي شخص مجتهد وجادّ يمتلك خبرة عملية كبيرة في مجال المكتبات. مؤهّل للعمل في جميع أنواع المكتبات، ولديه شغف دائم بتطوير نفسه وتعلّم كل جديد في المجال." },
+      },
+      {
+        initials: "AT", name: { en: "Dr. Amr Ramadan Tawfik", ar: "د. عمرو رمضان توفيق" },
+        role: { en: "Library Manager · Dubai Judicial Institute", ar: "مدير المكتبة · معهد دبي القضائي" },
+        text: { en: "Dr. Ali has long experience in library and information science.", ar: "يتمتّع الدكتور علي بخبرة طويلة في علم المكتبات والمعلومات." },
+      },
+      {
+        initials: "AE", name: { en: "Prof. Amgad Elgohary", ar: "أ.د. أمجد الجوهري" },
+        role: { en: "Professor of Library & Information Science · Ain Shams University", ar: "أستاذ علم المكتبات والمعلومات · جامعة عين شمس" },
+        text: { en: "I have known Dr. Ali for a long time. He is a very active, dynamic and highly skilled person — in both communication and research. He is very helpful and brings positive energy to the work environment.", ar: "أعرف الدكتور علي منذ زمن طويل. هو شخص نشيط وديناميكي وذو مهارة عالية في التواصل والبحث معاً. متعاون جداً ويبثّ طاقة إيجابية في بيئة العمل." },
+      },
+      {
+        initials: "KE", name: { en: "Dr. Kamal ElGazzar", ar: "د. كمال الجزار" },
+        role: { en: "Chief Executive Officer · ALZAD", ar: "الرئيس التنفيذي · ALZAD" },
+        text: { en: "Dr. Ali Fathy Alsherif is a well-known expert in publishing and libraries, bringing both academic knowledge and real-world experience. He has always impressed me with his exceptional work ethic, politeness and reliability — always willing to help, and working well both independently and within a team.", ar: "الدكتور علي فتحي الشريف خبير معروف في النشر والمكتبات، يجمع بين المعرفة الأكاديمية والخبرة العملية. لطالما أبهرني بأخلاقيات عمله الاستثنائية ولباقته وموثوقيته — مستعدّ دائماً للمساعدة، ويعمل بكفاءة منفرداً وضمن الفريق." },
+      },
+      {
+        initials: "MA", name: { en: "Dr. Mohamed Noureldin Abdelhakim", ar: "د. محمد نور الدين عبد الحكيم" },
+        role: { en: "Professor of Business & Informatics · Canadian University Dubai", ar: "أستاذ إدارة الأعمال والمعلوماتية · الجامعة الكندية دبي" },
+        text: { en: "I strongly recommend Dr. Ali Fathy to join any university or organisation. He is academically and professionally well qualified.", ar: "أوصي بشدّة بانضمام الدكتور علي فتحي إلى أي جامعة أو مؤسسة. فهو مؤهّل أكاديمياً ومهنياً على أعلى مستوى." },
+      },
+      {
+        initials: "AM", name: { en: "Prof. Amany Megahed", ar: "أ.د. أماني مجاهد" },
+        role: { en: "Professor & Head of Library & Information Science · Minufiya University", ar: "أستاذ ورئيس قسم علم المكتبات والمعلومات · جامعة المنوفية" },
+        text: { en: "Mr. Ali is a very active librarian and a creative person — he always thinks outside the box to optimize his work.", ar: "الأستاذ علي أخصائي مكتبات نشيط للغاية وشخص مبدع — يفكّر دائماً خارج الصندوق لتحسين عمله." },
+      },
+    ],
   };
 
   /* ---------------- i18n dictionary ---------------- */
@@ -645,8 +688,8 @@
       "gallery.cat.teaching": "Teaching & academia", "gallery.cat.honor": "Recognition & institutions",
       "services.kicker": "Work with me", "services.title": "Consulting services",
       "services.sub": "Advisory, implementation and capacity-building for institutions modernising their knowledge infrastructure.",
-      "testi.kicker": "Recognition", "testi.title": "What partners say",
-      "testi.sub": "A space reserved for testimonials from institutions and collaborators.",
+      "testi.kicker": "Recognition", "testi.title": "What colleagues say",
+      "testi.sub": "Recommendations from professors, library directors and colleagues across the region.",
       "testi.placeholder": "Your testimonial could appear here.",
       "contact.kicker": "Contact", "contact.title": "Let's build something intelligent",
       "contact.sub": "For consulting, training, keynote invitations or research collaboration.",
@@ -715,8 +758,8 @@
       "gallery.cat.teaching": "التدريس والأكاديمية", "gallery.cat.honor": "التكريم والمؤسسات",
       "services.kicker": "اعمل معي", "services.title": "الخدمات الاستشارية",
       "services.sub": "الاستشارات والتنفيذ وبناء القدرات للمؤسسات التي تحدّث بنيتها المعرفية.",
-      "testi.kicker": "تقدير", "testi.title": "آراء الشركاء",
-      "testi.sub": "مساحة مخصّصة لآراء المؤسسات والمتعاونين.",
+      "testi.kicker": "تقدير", "testi.title": "ماذا قال الزملاء",
+      "testi.sub": "توصيات من أساتذة ومديري مكتبات وزملاء عبر المنطقة.",
       "testi.placeholder": "يمكن أن يظهر رأيك هنا.",
       "contact.kicker": "تواصل", "contact.title": "لنبنِ شيئًا ذكيًا معًا",
       "contact.sub": "للاستشارات والتدريب ودعوات المحاضرات أو التعاون البحثي.",
@@ -943,10 +986,16 @@
         <h3>${ti}</h3><p>${de}</p></article>`;
     }).join("");
 
-    // Testimonials (placeholders)
-    $("#testiGrid").innerHTML = [0, 1, 2].map(() =>
-      `<article class="tcard placeholder reveal">${ICONS.quote}<span>${t("testi.placeholder")}</span></article>`
-    ).join("");
+    // Testimonials (LinkedIn recommendations)
+    $("#testiGrid").innerHTML = DATA.testimonials.map((x) =>
+      `<article class="tcard reveal">
+        <span class="quote">“</span>
+        <p>${x.text[lang]}</p>
+        <div class="who">
+          <span class="avatar">${x.initials}</span>
+          <div><strong>${x.name[lang]}</strong><span>${x.role[lang]}</span></div>
+        </div>
+      </article>`).join("");
 
     bindLightboxTargets();
     observeReveal();
