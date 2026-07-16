@@ -221,6 +221,18 @@
 
     experience: [
       {
+        period: "Jan 2025 — Present", periodAr: "يناير 2025 — حتى الآن",
+        role: "Trainer & Library Technologies and AI Integration Specialist", roleAr: "مدرّب وأخصائي تقنيات المكتبات وتكامل الذكاء الاصطناعي",
+        org: "Digital Library Technology FZ", orgAr: "شركة تقنية المكتبة الرقمية",
+        place: "Abu Dhabi, UAE", placeAr: "أبوظبي، الإمارات",
+        pts: [
+          ["Build partnerships with academic libraries and cultural institutions to deliver AI-enhanced training and consulting services.", "بناء شراكات مع المكتبات الأكاديمية والمؤسسات الثقافية لتقديم تدريب واستشارات معزّزة بالذكاء الاصطناعي."],
+          ["Design tailored solutions that improve digital repository systems and staff development programmes.", "تصميم حلول مخصّصة تطوّر أنظمة المستودعات الرقمية وبرامج تنمية الكوادر."],
+          ["Deliver a professional workshop portfolio in Arabic covering AI, repositories, cataloguing and digital preservation.", "تقديم حزمة ورش مهنية بالعربية تغطي الذكاء الاصطناعي والمستودعات والفهرسة والحفظ الرقمي."],
+        ],
+        tags: ["AI Training", "Consulting", "Partnerships"],
+      },
+      {
         period: "Nov 2021 — Present", periodAr: "نوفمبر 2021 — حتى الآن",
         role: "Chief Knowledge & Digital Services Officer", roleAr: "الرئيس التنفيذي للمعرفة والخدمات الرقمية",
         org: "Digital Library Technology FZ", orgAr: "شركة تقنية المكتبة الرقمية",
