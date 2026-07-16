@@ -658,7 +658,8 @@
       "search.placeholder": "Search books, research, workshops…",
       "hero.eyebrow": "Dubai, United Arab Emirates · Golden Visa Holder",
       "hero.hello": "Dr. Ali Fathy", "hero.name": "Alsherif",
-      "hero.roles": "Academic Lecturer · Researcher · Library & Information Science Expert · Digital Repositories & Archives Consultant · AI Consultant for Libraries & Knowledge Management · International Trainer & Speaker",
+      "hero.job": "Intelligent Systems & Digital Transformation Consultant",
+      "hero.roles": "Academic Lecturer · Researcher · International Trainer & Speaker",
       "hero.bio": "Two decades building modern, data-driven knowledge environments across leading academic and governmental institutions in the UAE — from digital repositories and large-scale digitization to AI-enabled information services.",
       "cta.cv": "Download CV", "cta.consult": "Book a Consultation", "cta.speak": "Invite to Speak",
       "stat.years": "Years experience", "stat.books": "Books published", "stat.pubs": "Publications", "stat.workshops": "Workshops",
@@ -728,7 +729,8 @@
       "search.placeholder": "ابحث في الكتب والأبحاث والورش…",
       "hero.eyebrow": "دبي، الإمارات العربية المتحدة · حاصل على الإقامة الذهبية",
       "hero.hello": "د. علي فتحي", "hero.name": "الشريف",
-      "hero.roles": "محاضر أكاديمي · باحث · خبير علم المكتبات والمعلومات · مستشار المستودعات الرقمية والأرشيف · مستشار الذكاء الاصطناعي للمكتبات وإدارة المعرفة · مدرب ومتحدث دولي",
+      "hero.job": "مستشار النظم الذكية والتحول الرقمي",
+      "hero.roles": "محاضر أكاديمي · باحث · مدرّب ومتحدّث دولي",
       "hero.bio": "عقدان من بناء بيئات معرفية حديثة قائمة على البيانات في كبرى المؤسسات الأكاديمية والحكومية بالإمارات — من المستودعات الرقمية والرقمنة واسعة النطاق إلى خدمات المعلومات المدعومة بالذكاء الاصطناعي.",
       "cta.cv": "تحميل السيرة الذاتية", "cta.consult": "احجز استشارة", "cta.speak": "دعوة للتحدث",
       "stat.years": "سنوات خبرة", "stat.books": "كتب منشورة", "stat.pubs": "أبحاث ومقالات", "stat.workshops": "ورش عمل",
@@ -1048,8 +1050,8 @@
     const yr = $("#year"); if (yr) yr.textContent = new Date().getFullYear();
     $("#langLabel").textContent = lang === "ar" ? "EN" : "ع";
     document.title = lang === "ar"
-      ? "د. علي فتحي الشريف — علم المكتبات والمعلومات · مستشار الذكاء الاصطناعي والمستودعات الرقمية"
-      : "Dr. Ali Fathy Alsherif — Library & Information Science · AI & Digital Repositories Consultant";
+      ? "د. علي فتحي الشريف — مستشار النظم الذكية والتحول الرقمي"
+      : "Dr. Ali Fathy Alsherif — Intelligent Systems & Digital Transformation Consultant";
   }
 
   function setLang(l) {

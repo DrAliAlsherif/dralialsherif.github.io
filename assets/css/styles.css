@@ -176,7 +176,10 @@ html[data-theme="dark"] .eyebrow{background:rgba(124,92,255,.14)}
 .hero-title{font-size:clamp(2.6rem,6vw,4.4rem);font-weight:800;margin-bottom:1rem}
 .hero-title span{display:block}
 .grad-text{background:var(--brand-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero-roles{font-size:clamp(.98rem,1.6vw,1.12rem);font-weight:600;color:var(--text-soft);margin-bottom:1rem;max-width:44ch}
+.hero-job{font-family:var(--ff-head);font-size:clamp(1.15rem,2.4vw,1.55rem);font-weight:700;letter-spacing:-.01em;
+  background:var(--brand-grad);-webkit-background-clip:text;background-clip:text;color:transparent;
+  margin-bottom:.5rem;width:fit-content}
+.hero-roles{font-size:clamp(.92rem,1.4vw,1.02rem);font-weight:600;color:var(--text-soft);margin-bottom:1rem;max-width:44ch}
 .hero-bio{font-size:1.02rem;color:var(--text-mute);max-width:50ch;margin-bottom:1.8rem}
 .hero-cta{display:flex;flex-wrap:wrap;gap:.7rem;margin-bottom:2.2rem}
 .hero-stats{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,auto);gap:clamp(1rem,3vw,2.4rem)}
@@ -607,7 +610,7 @@ html[data-theme="dark"] .ci-icon{background:rgba(124,92,255,.14)}
   .hero-inner{grid-template-columns:1fr;text-align:center}
   .hero-content{order:2}
   .hero-portrait{order:1}
-  .hero-roles,.hero-bio{margin-inline:auto}
+  .hero-roles,.hero-bio,.hero-job{margin-inline:auto}
   .hero-cta,.hero-stats{justify-content:center}
   .hero-stats{grid-template-columns:repeat(4,auto);justify-content:center}
   .about-grid,.volunteer-wrap,.contact-grid{grid-template-columns:1fr}
