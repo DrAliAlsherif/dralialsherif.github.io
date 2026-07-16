@@ -658,7 +658,7 @@
       "search.placeholder": "Search books, research, workshops…",
       "hero.eyebrow": "Dubai, United Arab Emirates · Golden Visa Holder",
       "hero.hello": "Dr. Ali Fathy", "hero.name": "Alsherif",
-      "hero.job": "Intelligent Systems & Digital Transformation Consultant",
+      "hero.job": "Smart Systems & Digital Transformation Consultant",
       "hero.roles": "Academic Lecturer · Researcher · International Trainer & Speaker",
       "hero.bio": "Two decades building modern, data-driven knowledge environments across leading academic and governmental institutions in the UAE — from digital repositories and large-scale digitization to AI-enabled information services.",
       "cta.cv": "Download CV", "cta.consult": "Book a Consultation", "cta.speak": "Invite to Speak",
@@ -1051,7 +1051,7 @@
     $("#langLabel").textContent = lang === "ar" ? "EN" : "ع";
     document.title = lang === "ar"
       ? "د. علي فتحي الشريف — مستشار النظم الذكية والتحول الرقمي"
-      : "Dr. Ali Fathy Alsherif — Intelligent Systems & Digital Transformation Consultant";
+      : "Dr. Ali Fathy Alsherif — Smart Systems & Digital Transformation Consultant";
   }
 
   function setLang(l) {
