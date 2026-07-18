@@ -224,7 +224,7 @@
         period: "Jan 2025 — Present", periodAr: "يناير 2025 — حتى الآن",
         role: "Trainer & Library Technologies and AI Integration Specialist", roleAr: "مدرّب وأخصائي تقنيات المكتبات وتكامل الذكاء الاصطناعي",
         org: "Digital Library Technology FZ", orgAr: "شركة تقنية المكتبة الرقمية",
-        place: "Abu Dhabi, UAE", placeAr: "أبوظبي، الإمارات",
+        place: "Sharjah, UAE", placeAr: "الشارقة، الإمارات",
         pts: [
           ["Build partnerships with academic libraries and cultural institutions to deliver AI-enhanced training and consulting services.", "بناء شراكات مع المكتبات الأكاديمية والمؤسسات الثقافية لتقديم تدريب واستشارات معزّزة بالذكاء الاصطناعي."],
           ["Design tailored solutions that improve digital repository systems and staff development programmes.", "تصميم حلول مخصّصة تطوّر أنظمة المستودعات الرقمية وبرامج تنمية الكوادر."],
@@ -352,6 +352,10 @@
     ],
 
     research: [
+      { type: "paper", year: "2026", link: "https://ajadi.weebly.com/", img: "assets/img/research/qasr-al-watan-partnership.png",
+        authors: { en: "Dr. Ali Fathy Alsherif &amp; Sarah M. Al Saadi", ar: "د. علي فتحي الشريف وأ. سارة محمد السعدي" },
+        en: ["Qasr Al Watan Library &amp; the Arabic Language Centre: A Strategic Partnership to Support Cultural &amp; Creative Content", "Arab Journal of Archives, Documentation &amp; Information — Vol. 29, No. 58"],
+        ar: ["مكتبة قصر الوطن ومركز اللغة العربية: شراكة استراتيجية لدعم المحتوى الثقافي والإبداعي", "المجلة العربية للأرشيف والتوثيق والمعلومات — س29، ع58"] },
       { type: "conference", year: "2025", en: ["The Use of Generative AI in Delivering Information Services in Academic Libraries: A Foresight Study Using Falcon LLM & Llama AI Models", "First Intl. Conference on Library Sciences — Al Wasl University & MBR Library, Dubai"], ar: ["استخدام الذكاء الاصطناعي التوليدي في تقديم الخدمات المعلوماتية بالمكتبات الأكاديمية: دراسة استشرافية باستخدام نماذج Falcon وLlama", "المؤتمر الدولي الأول لعلوم المكتبات — جامعة الوصل ومكتبة محمد بن راشد، دبي"] },
       { type: "conference", year: "2024", en: ["Digital Knowledge & Archival Services in the Post-Repository Era: Building a Repository for Documents & Heritage of UAE National Heritage Centers", "Digital Archiving in the Arab World — National Library & Archives & Sorbonne University, Abu Dhabi"], ar: ["الخدمات المعرفية والأرشيفية الرقمية في ما بعد عصر المستودعات: بناء مستودع لوثائق وتراث مراكز التراث الوطني بالإمارات", "الأرشفة الرقمية في العالم العربي — الأرشيف والمكتبة الوطنية وجامعة السوربون، أبوظبي"] },
       { type: "talk", year: "2024", en: ["Digitization of Arab Heritage and Its Role in Enriching the Arabic Language", "Abu Dhabi Arabic Language Centre & Qasr Al Watan Library — Abu Dhabi International Book Fair"], ar: ["رقمنة التراث العربي ودورها في إثراء اللغة العربية", "مركز أبوظبي للغة العربية ومكتبة قصر الوطن — معرض أبوظبي الدولي للكتاب"] },
@@ -1019,12 +1023,27 @@
     $("#researchGrid").innerHTML = DATA.research.map((x, i) => {
       const c = pick(x);
       const show = filter === "all" || x.type === filter;
+      const mediaInner = x.img
+        ? `<img src="${x.img}" alt="${c[0]}" loading="lazy" onerror="this.style.display='none'" />`
+        : researchArt(x.en[0]);
+      const mediaCls = x.img ? "rcard-media rcard-media--img" : "rcard-media art-panel";
+      const media = x.link
+        ? `<a class="${mediaCls}" href="${x.link}" target="_blank" rel="noopener noreferrer" aria-label="${c[0]}">${mediaInner}</a>`
+        : `<div class="${mediaCls}">${mediaInner}</div>`;
+      const authors = x.authors
+        ? `<div class="rauthors">${lang === "ar" ? x.authors.ar : x.authors.en}</div>`
+        : "";
+      const link = x.link
+        ? `<a class="rcard-link" href="${x.link}" target="_blank" rel="noopener noreferrer">${lang === "ar" ? "الوصول إلى الدراسة" : "Access the study"} <span aria-hidden="true">↗</span></a>`
+        : "";
       return `<article class="rcard${show ? "" : " hide"} reveal" data-type="${x.type}" style="transition-delay:${(i % 3) * 40}ms">
-        <div class="rcard-media art-panel">${researchArt(x.en[0])}</div>
+        ${media}
         <div class="rcard-body">
           <span class="rtype">${RTYPE[lang][x.type] || x.type}</span>
           <h3>${c[0]}</h3>
+          ${authors}
           <div class="rvenue"><span class="ryear">${x.year}</span> · ${c[1]}</div>
+          ${link}
         </div>
       </article>`;
     }).join("");
