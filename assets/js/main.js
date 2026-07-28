@@ -802,6 +802,24 @@
     ar: { paper: "بحث في دورية", conference: "بحث مؤتمر", talk: "محاضرة", article: "مقال" },
   };
 
+  /* Intrinsic gallery image sizes → let the browser reserve space (avoids layout shift) */
+  const GALLERY_DIMS = {
+    "42-abu-dhabi.jpg": [960, 1280], "ad-gov-libraries-1.jpg": [1170, 1137], "ad-gov-libraries-2.jpg": [994, 493],
+    "ad-gov-libraries-3.jpg": [1170, 1138], "ad-gov-libraries-4.jpg": [1170, 1125], "afli-conf-2022.jpg": [800, 600],
+    "afli-organizing-1.jpg": [1600, 1200], "afli-organizing-2.jpg": [1600, 901], "afli-organizing-luxor-2017.jpg": [1072, 712],
+    "ala-sharjah-1.jpg": [1107, 667], "ala-sharjah-2.jpg": [1280, 960], "ala-sharjah-3.jpg": [1600, 1200],
+    "alexandria-library-conf.jpg": [1170, 1138], "arab-league-conf-1.jpg": [1170, 1153], "arab-league-conf-2.jpg": [1170, 1153],
+    "arab-league-conf-3.jpg": [1600, 1195], "cairo-university-1.jpg": [1200, 1600], "cairo-university-2.jpg": [1170, 1141],
+    "culture-science-symposium.jpg": [1024, 682], "dubai-culture-science-1.jpg": [960, 640], "dubai-culture-science-2.jpg": [1170, 1160],
+    "dubai-intl-library-conf.jpg": [960, 1280], "emirates-heritage-club-1.jpg": [1193, 1280], "emirates-heritage-club-2.jpg": [1278, 1600],
+    "ica-archives-ad-2023-1.jpg": [1170, 764], "ica-archives-ad-2023-2.jpg": [1170, 771], "knowledge-summit-dubai-1.jpg": [960, 1280],
+    "knowledge-summit-dubai-2.jpg": [960, 1280], "mbr-knowledge-foundation.jpg": [1080, 1080], "sharjah-prize-library-lit.jpg": [800, 614],
+    "sharjah-university.jpg": [1280, 853], "signing-ai-prompt-book.jpg": [597, 1280], "signing-digital-repositories.jpg": [3024, 3780],
+    "sla-abu-dhabi-organizing.jpg": [1600, 1200], "students-jumeira-1.jpg": [1600, 1200], "students-jumeira-2.jpg": [1170, 1137],
+    "univ-sharjah-library-symposium.jpg": [1170, 1128], "ws-digital-transformation-1.jpg": [1525, 1600], "ws-digital-transformation-2.jpg": [1200, 1600],
+    "ws-heritage-digitization.jpg": [1125, 1392], "ws-smart-cataloging.jpg": [1600, 1200],
+  };
+
   /* ---------------- State ---------------- */
   let lang = localStorage.getItem("af-lang") || "en";
   const $ = (s, c = document) => c.querySelector(s);
@@ -980,8 +998,10 @@
       const items = DATA.gallery.filter((x) => filter === "all" || x.cat === filter);
       $("#galleryGrid").innerHTML = items.map((x) => {
         const cap = lang === "ar" ? x.ar : x.en;
+        const dim = GALLERY_DIMS[x.img.split("/").pop()];
+        const wh = dim ? ` width="${dim[0]}" height="${dim[1]}"` : "";
         return `<figure class="gitem" data-cat="${x.cat}" data-lb="${x.img}" data-cap="${cap}">
-          <img src="${x.img}" alt="${cap}" loading="lazy" />
+          <img src="${x.img}" alt="${cap}" loading="lazy"${wh} />
           <figcaption class="gcap">${cap}</figcaption>
           <span class="gicon">${ICONS.zoom}</span>
         </figure>`;
@@ -1131,10 +1151,16 @@
   const lb = $("#lightbox"), lbImg = $("#lbImg"), lbCap = $("#lbCaption");
   let lbList = [], lbIndex = 0;
   function bindLightboxTargets() {
-    lbList = $$("[data-lb]");
-    lbList.forEach((el, i) => {
-      el.onclick = () => openLb(i);
+    $$("[data-lb]").forEach((el) => {
+      el.onclick = () => openLbFor(el);
     });
+  }
+  function openLbFor(el) {
+    // Scope prev/next navigation to the same section as the clicked image
+    const group = (n) => (n.closest("section[id]") || {}).id || "lb";
+    const key = group(el);
+    lbList = $$("[data-lb]").filter((n) => group(n) === key);
+    openLb(lbList.indexOf(el));
   }
   function openLb(i) {
     lbIndex = i;
