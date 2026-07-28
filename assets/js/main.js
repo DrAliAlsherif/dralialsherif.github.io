@@ -221,7 +221,7 @@
 
     experience: [
       {
-        period: "2022 — Present", periodAr: "2022 — حتى الآن",
+        period: "Jan 2024 — Present", periodAr: "يناير 2024 — حتى الآن",
         role: "Trainer & Smart Systems & Digital Transformation Consultant", roleAr: "مدرّب ومستشار النظم الذكية والتحول الرقمي",
         org: "Digital Library Technology FZ", orgAr: "شركة تقنية المكتبة الرقمية",
         place: "Sharjah, UAE", placeAr: "الشارقة، الإمارات",
