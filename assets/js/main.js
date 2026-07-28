@@ -527,9 +527,9 @@
 
     volunteer: [
       { period: "2013 — 2022", periodAr: "2013 — 2022",
-        role: "Coordinator, Arab Federation for Libraries & Information (AFLI)", roleAr: "منسّق الاتحاد العربي للمكتبات والمعلومات (أفلي)",
-        org: "AFLI — United Arab Emirates", orgAr: "أفلي — الإمارات العربية المتحدة",
-        impact: ["Represented and coordinated AFLI activities across the UAE for nine years.", "تمثيل وتنسيق أنشطة أفلي في الإمارات لمدة تسع سنوات."] },
+        role: "Coordinator, Arab Federation for Libraries & Information (AFLI)", roleAr: "منسّق الاتحاد العربي للمكتبات والمعلومات (أعلم)",
+        org: "AFLI — United Arab Emirates", orgAr: "أعلم — الإمارات العربية المتحدة",
+        impact: ["Represented and coordinated AFLI activities across the UAE for nine years.", "تمثيل وتنسيق أنشطة أعلم في الإمارات لمدة تسع سنوات."] },
       { period: "Ongoing", periodAr: "مستمر",
         role: "Volunteer — UAE Volunteer Platform", roleAr: "متطوع — منصة متطوعين.امارات",
         org: "volunteers.ae — National Platform", orgAr: "منصة متطوعين.امارات الوطنية",
