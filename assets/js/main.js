@@ -222,7 +222,7 @@
     experience: [
       {
         period: "Jan 2025 — Present", periodAr: "يناير 2025 — حتى الآن",
-        role: "Trainer & Library Technologies and AI Integration Specialist", roleAr: "مدرّب وأخصائي تقنيات المكتبات وتكامل الذكاء الاصطناعي",
+        role: "Trainer & Smart Systems & Digital Transformation Consultant", roleAr: "مدرّب ومستشار النظم الذكية والتحول الرقمي",
         org: "Digital Library Technology FZ", orgAr: "شركة تقنية المكتبة الرقمية",
         place: "Sharjah, UAE", placeAr: "الشارقة، الإمارات",
         pts: [
