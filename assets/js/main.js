@@ -575,6 +575,7 @@
       { img: "assets/img/gallery/arab-league-conf-1.jpg", cat: "conf", en: "The League of Arab States Conference", ar: "مؤتمر جامعة الدول العربية" },
       { img: "assets/img/gallery/arab-league-conf-2.jpg", cat: "conf", en: "The League of Arab States Conference", ar: "مؤتمر جامعة الدول العربية" },
       { img: "assets/img/gallery/arab-league-conf-3.jpg", cat: "conf", en: "The League of Arab States Conference", ar: "مؤتمر جامعة الدول العربية" },
+      { img: "assets/img/gallery/signing-ai-prompt-book.jpg", cat: "conf", en: "Book Signing at a Library & Publishing Exhibition", ar: "توقيع كتاب في معرض للمكتبات والنشر" },
       // Symposiums & forums
       { img: "assets/img/gallery/ad-gov-libraries-1.jpg", cat: "symposium", en: "Abu Dhabi Government Libraries Symposium", ar: "ملتقى مكتبات حكومة أبوظبي" },
       { img: "assets/img/gallery/ad-gov-libraries-2.jpg", cat: "symposium", en: "Abu Dhabi Government Libraries Symposium", ar: "ملتقى مكتبات حكومة أبوظبي" },
@@ -590,7 +591,6 @@
       { img: "assets/img/gallery/ws-digital-transformation-2.jpg", cat: "workshop", en: "Digital Transformation Workshop", ar: "ورشة التحول الرقمي" },
       { img: "assets/img/gallery/ws-smart-cataloging.jpg", cat: "workshop", en: "Smart Cataloging Workshop in Libraries", ar: "ورشة الفهرسة الذكية في المكتبات" },
       // Book signings
-      { img: "assets/img/gallery/signing-ai-prompt-book.jpg", cat: "signing", en: "Signing “AI Prompt Engineering in Libraries”", ar: "توقيع كتاب هندسة أوامر الذكاء الاصطناعي في المكتبات" },
       { img: "assets/img/gallery/signing-digital-repositories.jpg", cat: "signing", en: "Signing “Digital Repositories”", ar: "توقيع كتاب المستودعات الرقمية" },
       // Teaching & academia
       { img: "assets/img/gallery/students-jumeira-1.jpg", cat: "teaching", en: "With my students at Jumeira University, Dubai", ar: "مع طلابي في جامعة جميرا، دبي" },
