@@ -387,6 +387,9 @@
       { img: "assets/img/gallery/ala-sharjah-2.jpg", tag: "Conference", tagAr: "مؤتمر",
         en: ["Sharjah International Library Conference", "SILC — with library leaders", "Sharjah, UAE", "2025", "Networking with regional and international library leaders."],
         ar: ["مؤتمر الشارقة الدولي للمكتبات", "مع قادة المكتبات", "الشارقة، الإمارات", "2025", "تواصل مع قادة المكتبات الإقليميين والدوليين."] },
+      { img: "assets/img/gallery/signing-ai-prompt-book.jpg", tag: "Book Signing", tagAr: "توقيع كتاب",
+        en: ["Signing “Artificial Intelligence Prompt Engineering in Libraries & Archives”", "Sharjah International Book Fair", "Sharjah, UAE", "2026", "Book signing session for the new title on AI prompt engineering in libraries and archives."],
+        ar: ["توقيع كتاب «هندسة أوامر الذكاء الاصطناعي في المكتبات والأرشيف»", "معرض الشارقة الدولي للكتاب", "الشارقة، الإمارات", "2026", "جلسة توقيع الكتاب الجديد حول هندسة أوامر الذكاء الاصطناعي في المكتبات والأرشيف."] },
     ],
 
     projects: [
@@ -575,7 +578,6 @@
       { img: "assets/img/gallery/arab-league-conf-1.jpg", cat: "conf", en: "The League of Arab States Conference", ar: "مؤتمر جامعة الدول العربية" },
       { img: "assets/img/gallery/arab-league-conf-2.jpg", cat: "conf", en: "The League of Arab States Conference", ar: "مؤتمر جامعة الدول العربية" },
       { img: "assets/img/gallery/arab-league-conf-3.jpg", cat: "conf", en: "The League of Arab States Conference", ar: "مؤتمر جامعة الدول العربية" },
-      { img: "assets/img/gallery/signing-ai-prompt-book.jpg", cat: "conf", en: "Book Signing at a Library & Publishing Exhibition", ar: "توقيع كتاب في معرض للمكتبات والنشر" },
       // Symposiums & forums
       { img: "assets/img/gallery/ad-gov-libraries-1.jpg", cat: "symposium", en: "Abu Dhabi Government Libraries Symposium", ar: "ملتقى مكتبات حكومة أبوظبي" },
       { img: "assets/img/gallery/ad-gov-libraries-2.jpg", cat: "symposium", en: "Abu Dhabi Government Libraries Symposium", ar: "ملتقى مكتبات حكومة أبوظبي" },
@@ -591,6 +593,7 @@
       { img: "assets/img/gallery/ws-digital-transformation-2.jpg", cat: "workshop", en: "Digital Transformation Workshop", ar: "ورشة التحول الرقمي" },
       { img: "assets/img/gallery/ws-smart-cataloging.jpg", cat: "workshop", en: "Smart Cataloging Workshop in Libraries", ar: "ورشة الفهرسة الذكية في المكتبات" },
       // Book signings
+      { img: "assets/img/gallery/signing-ai-prompt-book.jpg", cat: "signing", en: "Signing “AI Prompt Engineering in Libraries”", ar: "توقيع كتاب هندسة أوامر الذكاء الاصطناعي في المكتبات" },
       { img: "assets/img/gallery/signing-digital-repositories.jpg", cat: "signing", en: "Signing “Digital Repositories”", ar: "توقيع كتاب المستودعات الرقمية" },
       // Teaching & academia
       { img: "assets/img/gallery/students-jumeira-1.jpg", cat: "teaching", en: "With my students at Jumeira University, Dubai", ar: "مع طلابي في جامعة جميرا، دبي" },
