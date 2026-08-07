@@ -393,12 +393,15 @@
       { img: "assets/img/gallery/sharjah-market-focus-lbf-2019.jpg", tag: "Conference", tagAr: "مؤتمر",
         en: ["Sharjah Market Focus", "The London Book Fair 2020", "Sharjah, UAE", "2019", "Representing Sharjah's publishing market focus ahead of the London Book Fair."],
         ar: ["الشارقة تركّز على السوق", "معرض لندن الدولي للكتاب 2020", "الشارقة، الإمارات", "2019", "تمثيل تركيز الشارقة على سوق النشر قبيل معرض لندن الدولي للكتاب."] },
-      { img: "assets/img/gallery/youth-knowledge-forum-dubai-2022.jpg", tag: "Forum", tagAr: "ملتقى",
+      { img: "assets/img/gallery/youth-knowledge-forum-dubai-2022.jpg", tag: "Forum", tagAr: "ملتقى", pos: "50% 15%",
         en: ["Youth Knowledge Forum", "Promising Tomorrow — Government of Dubai", "Dubai, UAE", "2022", "Speaking at the Youth Knowledge Forum on building a promising tomorrow."],
         ar: ["ملتقى شباب المعرفة", "مستقبل واعد — حكومة دبي", "دبي، الإمارات", "2022", "متحدث في ملتقى شباب المعرفة حول بناء مستقبل واعد."] },
-      { img: "assets/img/gallery/42-abu-dhabi-ai-ethics-2025.jpg", tag: "Talk", tagAr: "محاضرة",
+      { img: "assets/img/gallery/42-abu-dhabi-ai-ethics-2025.jpg", tag: "Talk", tagAr: "محاضرة", pos: "50% 18%",
         en: ["AI Ethics & Its Applications", "42 Abu Dhabi — Generation Program", "Abu Dhabi, UAE", "2025", "Talk on artificial intelligence and the ethics of its use."],
         ar: ["أخلاقيات الذكاء الاصطناعي وتطبيقاته", "42 أبوظبي — برنامج Generation", "أبوظبي، الإمارات", "2025", "محاضرة حول الذكاء الاصطناعي وأخلاقيات استخدامه."] },
+      { img: "assets/img/gallery/dubai-culture-science-panel-2019.jpg", tag: "Symposium", tagAr: "ندوة",
+        en: ["Culture & Science Symposium — panel session", "Cultural & Scientific Association", "Dubai, UAE", "2019", "Speaking in a panel session at the Culture & Science Symposium."],
+        ar: ["ندوة الثقافة والعلوم — جلسة نقاش", "ندوة الثقافة والعلوم", "دبي، الإمارات", "2019", "مداخلة في جلسة نقاش ضمن ندوة الثقافة والعلوم."] },
       { img: "assets/img/gallery/alexandria-library-conf.jpg", tag: "Conference", tagAr: "مؤتمر",
         en: ["Speaker at the Library of Alexandria Conference", "Bibliotheca Alexandrina", "Alexandria, Egypt", "2017", "Speaking at a conference held at the Library of Alexandria."],
         ar: ["متحدث في مؤتمر مكتبة الإسكندرية", "مكتبة الإسكندرية", "الإسكندرية، مصر", "2017", "كلمة في مؤتمر أقيم بمكتبة الإسكندرية."] },
@@ -934,7 +937,7 @@
       const c = pick(x);
       return `<article class="ecard reveal" style="transition-delay:${i * 40}ms">
         <div class="ecard-media" data-lb="${x.img}" data-cap="${c[0]}">
-          <img src="${x.img}" alt="${c[0]}" loading="lazy" />
+          <img src="${x.img}" alt="${c[0]}" loading="lazy"${x.pos ? ` style="object-position:${x.pos}"` : ""} />
           <span class="etag">${lang === "ar" ? x.tagAr : x.tag}</span>
         </div>
         <div class="ecard-body">
